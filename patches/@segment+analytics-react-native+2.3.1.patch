@@ -1,0 +1,13 @@
+diff --git a/node_modules/@segment/analytics-react-native/lib/commonjs/context.js b/node_modules/@segment/analytics-react-native/lib/commonjs/context.js
+index 19e2207..615b17a 100644
+--- a/node_modules/@segment/analytics-react-native/lib/commonjs/context.js
++++ b/node_modules/@segment/analytics-react-native/lib/commonjs/context.js
+@@ -7,7 +7,7 @@ exports.getContext = void 0;
+ 
+ var _reactNative = require("react-native");
+ 
+-var _package = _interopRequireDefault(require("../package.json"));
++var _package = _interopRequireDefault(require("../../package.json"));
+ 
+ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+ 
