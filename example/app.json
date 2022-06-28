@@ -1,0 +1,22 @@
+{
+  "name": "kraftful-analytics-react-native-example",
+  "displayName": "KraftfulAnalyticsReactNative Example",
+  "expo": {
+    "name": "kraftful-analytics-react-native-example",
+    "slug": "kraftful-analytics-react-native-example",
+    "description": "Example app for kraftful-analytics-react-native",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
