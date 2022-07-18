@@ -2,7 +2,7 @@
 
 ## Setup
 
-Add the package as a dependency using your package manage of choice:
+Add the package as a dependency using your package manager of choice:
 
 ```
 yarn add kraftful-analytics-react-native
