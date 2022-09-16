@@ -12,12 +12,12 @@ export class KraftfulAnalytics {
   }
 
   /**
-   * Initializes the KraftfulAnalytics library using the supplied write key.
-   * @param writeKey The writeKey from your Segment source settings.
+   * Initializes the KraftfulAnalytics library using the supplied API key.
+   * @param apiKey The API key from your Kraftful analytics account.
    */
-  public static initialize(writeKey: string) {
+  public static initialize(apiKey: string) {
     if (!KraftfulAnalytics.sender) return;
-    KraftfulAnalytics.sender = new SegmentEventSender(writeKey);
+    KraftfulAnalytics.sender = new SegmentEventSender(apiKey);
   }
 
   /**
