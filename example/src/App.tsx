@@ -3,7 +3,7 @@ import * as React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import KraftfulAnalytics from "kraftful-analytics-react-native";
 
-KraftfulAnalytics.initialize("MY-WRITE-KEY");
+KraftfulAnalytics.initialize("MY-API-KEY");
 
 export default function App() {
   return (

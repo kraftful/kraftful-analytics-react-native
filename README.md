@@ -18,12 +18,14 @@ import KraftfulAnalytics from "kraftful-analytics-react-native";
 
 The KraftfulAnalytics API exposes the following methods:
 
-### `initialize(writeKey: string)`
+### `initialize(apiKey: string)`
 
 Add the initialize call to the root of your App module. This is typically done right above your App component definition.
 
+You can find your API key by logging into your Kraftful analytics account at [https://analytics.kraftful.com/settings/api-keys](https://analytics.kraftful.com/settings/api-keys).
+
 ```typescript
-KraftfulAnalytics.initialize("YOUR-WRITE-KEY");
+KraftfulAnalytics.initialize("YOUR-API-KEY");
 
 const App = () => <View style={styles.container}>...</View>;
 ```
