@@ -1,6 +1,6 @@
 {
   "name": "kraftful-analytics-react-native",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "Analytics for connected hardware apps and services.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
