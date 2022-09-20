@@ -16,8 +16,7 @@ export class KraftfulAnalytics {
    * @param apiKey The API key from your Kraftful analytics account.
    */
   public static initialize(apiKey: string) {
-    if (!KraftfulAnalytics.sender) return;
-    KraftfulAnalytics.sender = new SegmentEventSender(apiKey);
+    KraftfulAnalytics.initializeWith(new SegmentEventSender(apiKey));
   }
 
   /**
