@@ -1,6 +1,13 @@
 import type { EventSender } from "./core/EventSender";
 import { SegmentEventSender } from "./core/SegmentEventSender";
 
+export type KraftfulAnalyticsInitializeOptions = {
+  /**
+   * Whether to show debugging log information or not
+   */
+  debug?: boolean;
+};
+
 /**
  * The KraftfulAnalytics singleton
  */
@@ -8,15 +15,21 @@ export class KraftfulAnalytics {
   private static sender?: EventSender = undefined;
 
   constructor() {
-    throw new Error("KraftfulAnalytics should be instantiated");
+    throw new Error("KraftfulAnalytics should not be instantiated");
   }
 
   /**
    * Initializes the KraftfulAnalytics library using the supplied API key.
    * @param apiKey The API key from your Kraftful analytics account.
+   * @param options The options to initialize with.
    */
-  public static initialize(apiKey: string) {
-    KraftfulAnalytics.initializeWith(new SegmentEventSender(apiKey));
+  public static initialize(
+    apiKey: string,
+    options?: KraftfulAnalyticsInitializeOptions
+  ) {
+    KraftfulAnalytics.initializeWith(
+      new SegmentEventSender(apiKey, { debug: options?.debug })
+    );
   }
 
   /**
