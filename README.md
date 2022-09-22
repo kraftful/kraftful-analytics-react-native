@@ -5,7 +5,17 @@
 Add the package as a dependency using your package manager of choice:
 
 ```
-yarn add kraftful-analytics-react-native
+yarn add kraftful-analytics-react-native@^2.0.3 \
+  @react-native-async-storage/async-storage \
+  @segment/analytics-react-native@2.3.1 \
+  @segment/sovran-react-native@0.2.8 \
+  --save
+```
+
+Run `pod install` to properly link the native modules:
+
+```
+npx pod-install
 ```
 
 Import `KraftfulAnalytics` in your module files:
