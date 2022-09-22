@@ -1,5 +1,6 @@
-import { createClient } from "@segment/analytics-react-native";
-import type { SegmentClient } from "@segment/analytics-react-native/lib/typescript/src/analytics";
+import { createClient } from "../segment/client";
+
+import type { KraftfulSegmentClient } from "../segment/analytics";
 import type { EventSender, JsonMap } from "./EventSender";
 
 const KRAFTFUL_INGESTION_URL = "https://analytics-ingestion.kraftful.com/b";
@@ -16,7 +17,7 @@ const DEFAULT_SEGMENT_SETTINGS = {
 };
 
 export class SegmentEventSender implements EventSender {
-  private client: SegmentClient;
+  private client: KraftfulSegmentClient;
 
   constructor(
     apiKey: string,
@@ -44,8 +45,6 @@ export class SegmentEventSender implements EventSender {
   }
 
   track(name: string, properties?: JsonMap) {
-    if (!this.client) return;
-
     this.client.track(name, properties);
   }
 
