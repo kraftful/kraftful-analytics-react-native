@@ -11,3 +11,35 @@ index 19e2207..615b17a 100644
  
  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
  
+diff --git a/node_modules/@segment/analytics-react-native/src/analytics.ts b/node_modules/@segment/analytics-react-native/src/analytics.ts
+index ab1a744..2abc761 100644
+--- a/node_modules/@segment/analytics-react-native/src/analytics.ts
++++ b/node_modules/@segment/analytics-react-native/src/analytics.ts
+@@ -245,25 +245,8 @@ export class SegmentClient {
+   }
+ 
+   async fetchSettings() {
+-    const settingsEndpoint = `${settingsCDN}/${this.config.writeKey}/settings`;
+-
+-    try {
+-      const res = await fetch(settingsEndpoint);
+-      const resJson = await res.json();
+-      const integrations = resJson.integrations;
+-      this.logger.info(`Received settings from Segment succesfully.`);
+-      this.store.settings.set(integrations);
+-    } catch {
+-      this.logger.warn(
+-        `Could not receive settings from Segment. ${
+-          this.config.defaultSettings
+-            ? 'Will use the default settings.'
+-            : 'Device mode destinations will be ignored unless you specify default settings in the client config.'
+-        }`
+-      );
+-      if (this.config.defaultSettings) {
+-        this.store.settings.set(this.config.defaultSettings);
+-      }
++    if (this.config.defaultSettings) {
++      this.store.settings.set(this.config.defaultSettings);
+     }
+   }
+ 
